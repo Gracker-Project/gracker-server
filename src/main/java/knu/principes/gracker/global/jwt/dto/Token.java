@@ -6,9 +6,7 @@ import lombok.Builder;
 
 @Builder
 public record Token(
-        @NotNull String grantType,
-        @NotNull TokenType tokenType,
-        @NotNull String token,
-        @NotNull Cookie cookie
+        String grantType,
+        String accessToken
 ) {
 }

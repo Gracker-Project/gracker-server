@@ -20,9 +20,10 @@ spring:
 
   jwt:
     secret: ${JWT_SECRET}
-    authorities_key: auth
-    bearer-type: Bearer
     access-token-expire-time: 864000000 # 10 days in milliseconds
+
+  file:
+    upload-dir: ${STORAGE_PATH}
 
   security:
     oauth2:

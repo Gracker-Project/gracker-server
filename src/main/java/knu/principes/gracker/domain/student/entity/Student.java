@@ -1,12 +1,15 @@
 package knu.principes.gracker.domain.student.entity;
 
 import jakarta.persistence.*;
-import knu.principes.gracker.domain.student.entity.oauth.OAuthUserInfo;
-import knu.principes.gracker.domain.transcript.entity.Transcript;
+import jakarta.validation.constraints.Email;
+import knu.principes.gracker.domain.subject.entity.Subject;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -16,6 +19,15 @@ public class Student {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "student_id")
     private Long id;
+
+    @Email
+    @Column(
+            name = "email",
+            nullable = false,
+            length = 50,
+            unique = true
+    )
+    private String email;
 
     @Column(
             name = "student_number",
@@ -35,20 +47,20 @@ public class Student {
     @Enumerated(EnumType.STRING)
     private Role role;
 
-
-    @OneToOne(
-            mappedBy = "student",
+    @OneToMany(mappedBy = "student",
             cascade = CascadeType.ALL,
-            orphanRemoval = true
+            orphanRemoval = true,
+            fetch = FetchType.LAZY
     )
-    private Transcript transcript;
+    private List<Subject> subjects = new ArrayList<>();
 
     @Builder
-    public Student(String studentNumber, String studentName, Role role, Transcript transcript) {
+    public Student(String email,String studentNumber, String studentName, Role role, List<Subject> subjects) {
+        this.email = email;
         this.studentNumber = studentNumber;
         this.studentName = studentName;
         this.role = role;
-        this.transcript = transcript;
+        this.subjects = subjects;
     }
 }
 
