@@ -6,6 +6,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import knu.principes.gracker.global.jwt.dto.Token;
 import knu.principes.gracker.global.jwt.provider.JwtTokenProvider;
+import knu.principes.gracker.global.util.CookieUtil;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.Authentication;
@@ -25,10 +26,7 @@ public class LoginSuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
         log.info("onAuthenticationSuccess 성공");
         Token token = jwtTokenProvider.generateToken(authentication);
 
-        Cookie cookie = new Cookie("auth", token.accessToken());
-        cookie.setPath("/");
-        cookie.setMaxAge(60 * 60 * 24 * 10);
-        cookie.setHttpOnly(true);
+        Cookie cookie = CookieUtil.createCookie("auth", token.accessToken(), 60 * 60 * 24 * 10, "/", true);
         response.addCookie(cookie);
         response.sendRedirect("http://localhost:52222/"); // redirect to frontend, 조정하기
     }

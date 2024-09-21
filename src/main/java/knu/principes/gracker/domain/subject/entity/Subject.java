@@ -1,9 +1,8 @@
 package knu.principes.gracker.domain.subject.entity;
 
 import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import knu.principes.gracker.domain.student.entity.Student;
+import lombok.*;
 
 @Entity
 @Getter
@@ -25,5 +24,16 @@ public class Subject {
     @Enumerated(EnumType.STRING)
     private SubjectType subjectType;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "student_id")
+    private Student student;
 
+    @Builder
+    public Subject(String subjectName, Integer credit, Double grade, SubjectType subjectType, Student student) {
+        this.subjectName = subjectName;
+        this.credit = credit;
+        this.grade = grade;
+        this.subjectType = subjectType;
+        this.student = student;
+    }
 }

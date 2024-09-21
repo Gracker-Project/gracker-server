@@ -35,6 +35,9 @@ spring:
             redirect-uri: ${GOOGLE_REDIRECT_URI}
             scope: email, profile
 
+openai:
+    api-key: ${OPENAI_API_KEY}
+
 app:
   cors:
     allowed-origins:

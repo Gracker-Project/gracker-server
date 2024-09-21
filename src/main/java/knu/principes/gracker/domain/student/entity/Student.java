@@ -43,6 +43,10 @@ public class Student {
     )
     private String studentName;
 
+    @Enumerated(EnumType.STRING)
+    @Column(name = "major_type")
+    private MajorType majorType;
+
     @Column(name = "role")
     @Enumerated(EnumType.STRING)
     private Role role;
@@ -55,9 +59,10 @@ public class Student {
     private List<Subject> subjects = new ArrayList<>();
 
     @Builder
-    public Student(String email,String studentNumber, String studentName, Role role, List<Subject> subjects) {
+    public Student(String email,String studentNumber, MajorType majorType,String studentName, Role role, List<Subject> subjects) {
         this.email = email;
         this.studentNumber = studentNumber;
+        this.majorType = majorType;
         this.studentName = studentName;
         this.role = role;
         this.subjects = subjects;
