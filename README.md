@@ -51,14 +51,14 @@ Frontend: https://github.com/Gracker-Project/gracker-web
 
 > **경북대학교 구글 로그인**: 경북대학교 구글 계정 (@knu.ac.kr)만 구글 소셜 로그인이 가능하도록 개발했습니다.
 
-<img width="300" alt="학번학과페이지" src="https://github.com/user-attachments/assets/bdfce580-1ca8-4804-a62d-6ac9f1dc73fa">
-<img width="300" alt="학번학과페이지-1" src="https://github.com/user-attachments/assets/baae4fbc-326f-437b-8376-67a61a3f90ce">
-<img width="300" alt="학번학과페이지2" src="https://github.com/user-attachments/assets/e4a9b3f8-69d1-42c7-af6d-bfaf3fe47619">
+<img width="200" alt="학번학과페이지" src="https://github.com/user-attachments/assets/bdfce580-1ca8-4804-a62d-6ac9f1dc73fa">
+<img width="200" alt="학번학과페이지-1" src="https://github.com/user-attachments/assets/baae4fbc-326f-437b-8376-67a61a3f90ce">
+<img width="200" alt="학번학과페이지2" src="https://github.com/user-attachments/assets/e4a9b3f8-69d1-42c7-af6d-bfaf3fe47619">
 
 <br><br><br>
 
 > **홈 화면**: 졸업에 필요한 해당 학생의 학적 정보를 조회해 "학점 현황", "평점 현황", "기타 현황" 을 제공합니다.
-<img width="50" alt="홈 페이지" src="https://github.com/user-attachments/assets/58d15365-1417-4b08-9c35-1f5407d6993b">
+<img width="300" alt="홈 페이지" src="https://github.com/user-attachments/assets/58d15365-1417-4b08-9c35-1f5407d6993b">
 
 <br><br><br>
 
@@ -83,7 +83,7 @@ Frontend: https://github.com/Gracker-Project/gracker-web
 <br><br><br>
 
 > **더보기**: 언어 및 지역(한국어, 영어 지원)을 선택할 수 있으며, 그 밖의 다양한 기능을 제공합니다.
-<img width="390" alt="_페이지" src="https://github.com/user-attachments/assets/14eeaf44-a109-4ca6-8aec-2922fc2010d1">
+<img width="300" alt="_페이지" src="https://github.com/user-attachments/assets/14eeaf44-a109-4ca6-8aec-2922fc2010d1">
 
 <br><br><br>
 
@@ -92,7 +92,6 @@ Frontend: https://github.com/Gracker-Project/gracker-web
 - **졸업 요건 자동 계산**: 학생의 학업 이력을 기반으로 졸업 요건을 자동으로 계산하고, 남은 요건을 시각적으로 표시합니다.
 - **맞춤형 학업 계획 수립**: 남은 졸업 요건을 충족하기 위한 구체적인 학업 계획을 제안하며, 다음 학기에 수강하면 유용한 과목을 추천합니다.
 - **선배 팁 제공**: 졸업한 선배들의 검증된 팁을 통해 학업 및 졸업 준비 과정에서의 실질적인 조언을 제공합니다.
-- **실시간 업데이트**: 학사 정보 시스템과 연동하여 실시간으로 학업 현황을 업데이트하고, 변화에 신속하게 대응할 수 있습니다.
 
 ### 구현 방식
 
